@@ -1,0 +1,40 @@
+<div class="card">
+            <h4 class="card-header"><strong>
+                Lista de Categorias
+            </strong></h4>
+            <div class="card-body">
+                <a class="btn btn-primary" href="/categorias/guardar" role="button">
+                <i class="fas fa-file" aria-hidden="true"></i>
+                Nueva</a>
+                <hr>
+        <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Operaciones</th>
+                      </tr>
+                    </thead>
+            <tbody>
+                      {{#each categorias}}
+                      <tr>
+                        <tr>
+                        <th scope="row">{{id}}</th>
+                        <td colspan="1">{{nombre}}</td>
+                        <td colspan="1">{{descripcion}}</td>
+                        <td>
+                          
+                        
+                        <a class="btn " href="/categorias/eliminar/{{id}}" role="button" style="background-color: brown;">
+                          
+                          <i class="bi bi-trash3-fill"></i>
+                        </a>
+                    </td>
+                </tr>  
+                      </tr>
+                      {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

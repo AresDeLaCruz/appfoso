@@ -1,0 +1,24 @@
+<form method="post" action="/preguntas/califica">
+
+<h1>Instrucciones:Resuelve el siguiente cuestionario seleccionando la opción que consideres correcta</h1> <br>
+  {{#each data}}
+    <div class="form-group">
+      <h3><label for="">{{nombre}}</label></h3>
+      <input type="radio" id="opcion1{{@index}}" name="reactivos{{this.id}}" value="{{opcion_1}}" required>
+      <label for="opcion1{{@index}}">{{opcion_1}}</label>
+      <br>
+      <input type="radio" id="opcion2{{@index}}" name="reactivos{{this.id}}" value="{{opcion_2}}">
+      <label for="opcion2{{@index}}">{{opcion_2}}</label>
+      
+      {{#if opcion_3}}
+      <br>
+      <input type="radio" id="opcion3{{@index}}" name="reactivos{{this.id}}" value="{{opcion_3}}">
+      <label for="opcion3{{@index}}">{{opcion_3}}</label>
+      {{/if}}
+
+      <input type="hidden" name="idCategoria{{this.id}}" value="{{idCategoria}}">
+    </div>
+  {{/each}}
+  <br>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

@@ -1,0 +1,43 @@
+<div class="container">
+<h2>Resultados del  Quiz</h2>
+<h3>Alumno: {{nombre}} {{apellido}} <br> Grupo: {{grupo}} </h3>
+<h3>Calificación: {{calificacion}} / {{data.length}}</h3>
+
+  {{#if aprobado}}
+    <h4><span style="color: green;">¡Felicidades estás Aprobado!</span></h4>
+  {{else }}
+    <h4><span style="color: red;">Reprobado <br> "No te rindas, sigue estudiando"</span></h4>
+  {{/if}}
+<h4>Preguntas contestadas correctamente:</h4>
+<ul>
+  {{#each resultados}}
+    {{#if esCorrecta}}
+      <li>
+        <strong>{{pregunta}}</strong><br>
+        Tu respuesta: {{respuestaUsuario}}<br>
+        Respuesta correcta: {{respuestaCorrecta}}<br>
+      <strong>  <span style="color: green;">¡Correcta!</span></strong>
+      </li>
+      <br>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h4>Preguntas contestadas incorrectamente:</h4>
+<ul>
+  {{#each resultados}}
+    {{#unless esCorrecta}}
+      <li>
+        <strong>{{pregunta}}</strong><br>
+        Tu respuesta: {{respuestaUsuario}}<br>
+        Respuesta correcta: {{respuestaCorrecta}}<br>
+       <strong><span style="color: red;">¡Incorrecta!</span></strong> 
+      </li>
+      <br>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<a class="btn btn-primary" href="/preguntas/vistaUsuario" role="button">Volver al inicio</a>
+
+</div>

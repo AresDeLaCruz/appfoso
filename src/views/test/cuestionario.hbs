@@ -1,0 +1,26 @@
+{{#if isAuthenticated}}
+ 
+  <h1><p>Bienvenido {{username}}  </p></h1>
+  <h1><p>Nombre del alumno: {{nombre}} {{apellido}} <br> Grupo: {{grupo}} </p></h1>
+
+  
+{{else}}
+  
+  
+{{/if}}
+
+  <select name="categoria" class="form-control" id="selectCategoria">
+    <option value="">Selecciona una categoría</option>
+    {{#each categorias}}
+    <option value="{{id}}">{{nombre}}</option>
+    {{/each}}
+  </select>
+  <br>
+  
+<script>
+  const selectCategoria = document.getElementById('selectCategoria');
+  selectCategoria.addEventListener('change', function() { 
+    const opcion = this.value;
+    window.location.href = `/preguntas/materia/${opcion}`
+  });
+</script>

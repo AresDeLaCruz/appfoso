@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 20px;">
+<div class="card" style="width: 800px; margin:0px auto">
+            <h4 class="card-header text-center"> <Strong>Datos de las preguntas</Strong></h4>
+            <div class="card-body">
+                <form method="post" action="/preguntas/guardar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombre">Pregunta</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Escriba el nombre" required>
+                                
+                                <label for="opcion_1">Opcion1</label>
+                                <input type="text" class="form-control" name="opcion_1" id="opcion_1" placeholder="Escriba la opcion1" required>
+                                <label for="opcion_2">Opcion2</label>
+                                <input type="text" class="form-control" name="opcion_2" id="opcion_2" placeholder="Escriba la opcion2" required >
+                                <label for="opcion_3">Opcion3</label>
+                                <input type="text" class="form-control" name="opcion_3" id="opcion_3" placeholder="Escriba la opcion3" >
+                                <label for="correcta">Correcta</label>
+                                <input type="text" class="form-control" name="correcta" id="correcta" placeholder="Escriba la opcion correcta" required>
+                                <label for="idCategoria">idCategoria</label>
+                                <select class="form-control" name="idCategoria" id="idCategoria">
+                                    <option value="">seleccione una categoria</option>
+                                    {{#each categorias}}
+                                    <option value="{{id}}">{{nombre}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <button type="submit" title="Guardar la categoria" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+          </div>
+          </div>

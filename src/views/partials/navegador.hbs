@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg  " style="background-color: #e3f2fd; " >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" ><img src="/images/utn_256.png" width="40px" height="40px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+             <strong> <a class="nav-link active" style="font-family: : ;" aria-current="page" href="/">FOSOCUIII</a></strong>  
+              </li>
+                <li class="nav-item">
+             <strong>   <a class="nav-link sactive" aria-current="page"style="font-family: monospace;" href="/unidad1">Unidad I</a></strong>
+              </li>
+                <li class="nav-item">
+             <strong>   <a class="nav-link sactive" aria-current="page"style="font-family: monospace;" href="/unidad2">Unidad II</a></strong>
+              </li>
+               <li class="nav-item">
+             <strong>   <a class="nav-link sactive" aria-current="page"style="font-family: monospace;" href="/consejos">Consejos</a></strong>
+              </li>
+               <li class="nav-item">
+             <strong>   <a class="nav-link sactive" aria-current="page"style="font-family: monospace;" href="/acerca">Acerca de</a></strong>
+              </li>
+
+
+
+
+              <li class="nav-item">
+                {{#if (eq username "admin")}}
+           <strong>     <a class="nav-link"style="font-family: monospace;" href="/categorias/">Categorias</a></strong>
+              </li>
+               <li class="nav-item">
+            <strong><a class="nav-link"style="font-family: monospace;" href="/preguntas/">Preguntas</a></strong>    
+              {{else}}
+              {{/if}}
+              </li>
+           
+            </ul>
+    <form class="d-flex" role="search">
+  {{#if user}}
+   
+  <strong> <a class="btn btn-primary"style="font-family: monospace;" href='/logout'>Salir</a>&nbsp;</strong> 
+    
+  {{else}}
+    <a class="btn btn-primary" href="/signup"><strong>Iniciar sesión
+    <i class="bi bi-box-arrow-right"></i></strong>
+</a>&nbsp;
+    <a class="btn btn-primary" href="/registro"><strong>Registrate</a></strong>&nbsp;
+    
+  {{/if}}
+</form>
+          </div>
+        </div>
+        
+      </nav>

@@ -1,0 +1,28 @@
+<div class="container" style="margin-top: 20px;">
+<div class="card">
+            <h4 class="card-header text-center"> <Strong>Datos de la Categorias</Strong></h4>
+            <div class="card-body">
+                <form method="post" action="/categorias/guardar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Escriba el nombre" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="descripcion">Descripcion</label>
+                                <textarea class="form-control" name="descripcion" id="descripcion"  rows="2" required></textarea>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" title="Guardar la categoria" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+          </div>
+          </div>
